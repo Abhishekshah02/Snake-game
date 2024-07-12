@@ -72,14 +72,14 @@ def score_board():
         highscore = f.read()
 
     if abs(snake_x - food_x) < 20 and abs(snake_y - food_y) < 20:
-        score += 20
+        score += 2
         if score > int(highscore):
             highscore = score
 
         with open("highscore.txt", "w") as f:
             f.write(str(highscore))
 
-        length = length + 20
+        length = length + 2
         # print("Score:", score)
         food_x = random.randint(0, 950)
         food_y = random.randint(0, 750)
